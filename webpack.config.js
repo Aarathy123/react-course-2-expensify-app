@@ -7,7 +7,7 @@ module.exports = (env) => {
     return {
         entry: "./src/app.js", //entry point
         output: {
-            path: path.join(__dirname, "./public"), //file to be saved to
+            path: path.join(__dirname, "./public", 'dist'), //file to be saved to
             filename: 'bundle.js' //filename to which babel runs and saves the output
         },
         module: {
@@ -43,7 +43,8 @@ module.exports = (env) => {
         devtool: isProduction ? 'source-map' : 'inline-source-map',
         devServer: {
             contentBase: path.join(__dirname, "./public"),
-            historyApiFallback: true
+            historyApiFallback: true,
+            publicPath: '/dist'
         }
     }
 };
