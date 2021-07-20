@@ -11,14 +11,14 @@ exports[`should render Header correctly 1`] = `
       ariaCurrent="true"
       to="/dashboard"
     >
-       Dashboard 
+      Dashboard
     </NavLink>
     <NavLink
       activeClassName="is-active"
       ariaCurrent="true"
       to="/create"
     >
-       Create Expense
+      Create Expense
     </NavLink>
     <button
       onClick={[Function]}
