@@ -14,7 +14,7 @@ module.exports = (env) => {
     const isProduction = env == 'production';
     const CSSExtract = new ExtractTextPlugin('style.css');
     return {
-        entry: "./src/app.js", //entry point
+        entry: ["babel-polyfill","./src/app.js"], //entry point
         output: {
             path: path.join(__dirname, "./public", 'dist'), //file to be saved to
             filename: 'bundle.js' //filename to which babel runs and saves the output
